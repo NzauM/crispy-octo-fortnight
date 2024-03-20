@@ -1,0 +1,43 @@
+Create OOP Classes
+This classes should be mapped to tables
+Save Every Instance of this Class as a table record
+
+Create a Python Class
+
+Install SQLAlchemy
+Configure SQLALchemy:
+    1. Create a declarative_base object Base = declarative_base()
+    2. Create an Engine create_engine('driver:///name of database')
+    3. Track the Base Metadata in our database by using the create_all method
+Configure Class to SQLALchemy: 
+    1. Class Inherit from the declarative_base object
+    2. Class attribute called __tablename__ 
+    3. Class attributes for our table columns/class properties
+    4. One Column that is a Primary key
+
+Install Alembic
+COnfigure Alembic => alembic init migrations
+                  => alembic.ini // set up our sqlalchemy_url, 
+                  => migrations/env.py // setup our target metadata  
+
+Generate migrations
+Apply Migrations => upgrade database
+
+Adding Data to the Database:
+Create Instances which will be translated to table rows.
+Add those instances to the session, then commit the session.
+
+Seeding: // seeds.py 
+Adding Initial/Test Data to the Database, mostly automated
+
+
+Create Session:
+import sessionmaker
+create an instance of sessionmaker and bind our engine/database
+instantiate this new instance
+
+
+
+
+
+
